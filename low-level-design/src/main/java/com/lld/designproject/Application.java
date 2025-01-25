@@ -1,4 +1,4 @@
-package com.example.mynewproject;
+package com.lld.designproject;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
