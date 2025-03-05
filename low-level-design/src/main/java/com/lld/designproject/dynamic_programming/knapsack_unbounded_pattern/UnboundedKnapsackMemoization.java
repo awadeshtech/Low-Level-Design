@@ -27,7 +27,7 @@ public class UnboundedKnapsackMemoization {
             return dp[n][W] = Math.max(val[n - 1] + unboundedKnapsackMemoization(weight, val, W - weight[n - 1], n),
                 unboundedKnapsackMemoization(weight, val, W, n - 1));
         } else {
-            return unboundedKnapsackMemoization(weight, val, W, n - 1);
+            return dp[n][W] = unboundedKnapsackMemoization(weight, val, W, n - 1);
         }
     }
 }

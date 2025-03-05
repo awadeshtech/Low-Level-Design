@@ -37,6 +37,8 @@ public class MinimumSubsetSumDifferenceBottomUp {
                 }
             }
         }
+        //s2-s1 should be minimum, here sum of all the elements
+        // will be considered as range. So, range = s1+s2, s2 = range-s1,Minimum of (Range-s1-s1 =range-s2)
         List<Integer> candidates = new ArrayList<>();
         for (int i = 0; i <= sum / 2; i++) {
             if (dp[n][i]) {
