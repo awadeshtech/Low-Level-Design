@@ -8,6 +8,7 @@ import java.time.ZoneOffset;
 import java.time.temporal.ChronoUnit;
 import java.time.temporal.TemporalUnit;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.TimeZone;
 import java.util.concurrent.ArrayBlockingQueue;
@@ -36,6 +37,10 @@ public class CalendarApp {
         InputStreamReader inputStreamReader = new InputStreamReader(System.in);
         BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
 //       String line = bufferedReader.readLine();
+
+        List<Event> events = new ArrayList<>();
+        events.add(event);
+        events.sort(Comparator.comparing(Event::getTitle).thenComparing(Event::getEndTime));
 
 
     }
